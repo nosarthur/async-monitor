@@ -1,11 +1,10 @@
 import time
 
-
-now = time.monotonic()
+tic = time.monotonic()
 
 
 def check_health(i):
-    print(f'check health {i} @{time.monotonic() - now:0.1f}')
+    print(f'check health {i} @{time.monotonic() - tic:0.1f}')
     time.sleep(2 * i)
 
 

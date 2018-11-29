@@ -2,14 +2,14 @@ import time
 from typing import Callable
 
 
-now = time.monotonic()
+tic = time.monotonic()
 
 
 def check_health(i: int, predicate: Callable) -> bool:
     """
     Return True if something goes wrong
     """
-    print(f'check health {i} @{time.monotonic() - now:0.1f}')
+    print(f'check health {i} @{time.monotonic() - tic:0.1f}')
     return predicate()
 
 
